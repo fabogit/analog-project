@@ -14,9 +14,15 @@ import { Component } from '@angular/core';
 
     <h3>The fullstack meta-framework for Angular!</h3>
 
-    <div class="card">
-      <button type="button" (click)="increment()">Count {{ count }}</button>
-    </div>
+    <section class="flex justify-center">
+      <div class="flex-initial card">
+        <button type="button" (click)="increment()">Count {{ count }}</button>
+      </div>
+
+      <div class="flex-initial card">
+        <button type="button" (click)="reset()">Reset</button>
+      </div>
+    </section>
 
     <p class="read-the-docs">
       For guides on how to customize this project, visit the
@@ -45,5 +51,9 @@ export default class HomeComponent {
 
   increment() {
     this.count++;
+  }
+
+  reset() {
+    this.count = 0;
   }
 }
